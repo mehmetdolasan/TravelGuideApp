@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="TravelGuideApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="253" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="253" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-4d-ocd">
+                        <rect key="frame" x="0.0" y="0.0" width="253" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collectionViewImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="HMZ-eQ-N20">
+                                <rect key="frame" x="0.0" y="0.0" width="253" height="120"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collectionViewBookmarkBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="4MJ-Uc-xdd">
+                                <rect key="frame" x="200" y="20" width="33" height="32"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4MJ-Uc-xdd" secondAttribute="bottom" constant="68" id="19W-Q8-JXV"/>
+                            <constraint firstItem="4MJ-Uc-xdd" firstAttribute="top" secondItem="7xy-4d-ocd" secondAttribute="top" constant="20" symbolic="YES" id="BPa-H2-I0a"/>
+                            <constraint firstItem="4MJ-Uc-xdd" firstAttribute="leading" secondItem="7xy-4d-ocd" secondAttribute="leading" constant="200" id="Cy7-u7-Kxz"/>
+                            <constraint firstAttribute="height" constant="120" id="J0s-ss-Auh"/>
+                            <constraint firstAttribute="trailing" secondItem="HMZ-eQ-N20" secondAttribute="trailing" id="NWr-qA-jhR"/>
+                            <constraint firstItem="HMZ-eQ-N20" firstAttribute="top" secondItem="7xy-4d-ocd" secondAttribute="top" id="Pgs-H2-Uhc"/>
+                            <constraint firstAttribute="trailing" secondItem="4MJ-Uc-xdd" secondAttribute="trailing" constant="20" symbolic="YES" id="hEJ-P7-n50"/>
+                            <constraint firstAttribute="bottom" secondItem="HMZ-eQ-N20" secondAttribute="bottom" id="mlk-3e-eRd"/>
+                            <constraint firstItem="HMZ-eQ-N20" firstAttribute="leading" secondItem="7xy-4d-ocd" secondAttribute="leading" id="vCj-p3-NLG"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHF-8Y-Ych">
+                        <rect key="frame" x="0.0" y="120" width="253" height="94"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YJ-lq-HV7">
+                                <rect key="frame" x="8" y="8" width="135" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="ZPx-rw-cZH"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="EXPERIENCE">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="linkColor"/>
+                                            <font key="NSFont" size="12" name="ChalkboardSE-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa4-Np-eAe">
+                                <rect key="frame" x="8" y="25" width="229" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="NM7-38-MZU"/>
+                                    <constraint firstAttribute="width" constant="229" id="nnS-dq-bCf"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Beautiful Alley Scene in Old Town in Europe at Sunset">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="ChalkboardSE-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xa4-Np-eAe" firstAttribute="leading" secondItem="dHF-8Y-Ych" secondAttribute="leading" constant="8" id="A9R-Xm-we8"/>
+                            <constraint firstItem="7YJ-lq-HV7" firstAttribute="top" secondItem="dHF-8Y-Ych" secondAttribute="top" constant="8" id="EoL-hM-VgF"/>
+                            <constraint firstItem="7YJ-lq-HV7" firstAttribute="leading" secondItem="dHF-8Y-Ych" secondAttribute="leading" constant="8" id="IRz-u5-T9g"/>
+                            <constraint firstItem="xa4-Np-eAe" firstAttribute="top" secondItem="7YJ-lq-HV7" secondAttribute="bottom" id="LyE-jh-7G7"/>
+                            <constraint firstAttribute="height" constant="94" id="agK-b4-kb7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="7xy-4d-ocd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1AT-UD-khF"/>
+                <constraint firstItem="dHF-8Y-Ych" firstAttribute="top" secondItem="7xy-4d-ocd" secondAttribute="bottom" id="2ex-iE-3II"/>
+                <constraint firstAttribute="trailing" secondItem="7xy-4d-ocd" secondAttribute="trailing" id="Qsw-HI-Jhd"/>
+                <constraint firstItem="dHF-8Y-Ych" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bE4-XE-lPO"/>
+                <constraint firstAttribute="trailing" secondItem="dHF-8Y-Ych" secondAttribute="trailing" id="m9i-mU-6nc"/>
+                <constraint firstItem="7xy-4d-ocd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mpE-8O-BB2"/>
+            </constraints>
+            <size key="customSize" width="302" height="160"/>
+            <connections>
+                <outlet property="collectionViewBgImage" destination="HMZ-eQ-N20" id="S28-3C-EXj"/>
+                <outlet property="collectionViewBookmarkImage" destination="4MJ-Uc-xdd" id="d1I-cx-e71"/>
+                <outlet property="collectionViewDescLabel" destination="xa4-Np-eAe" id="P9N-LS-Uvi"/>
+                <outlet property="collectionViewTitleLabel" destination="7YJ-lq-HV7" id="JYG-cE-jCC"/>
+            </connections>
+            <point key="canvasLocation" x="147.82608695652175" y="152.67857142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="collectionViewBookmarkBg.png" width="32" height="32"/>
+        <image name="collectionViewImage.png" width="253" height="120"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

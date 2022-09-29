@@ -30,6 +30,19 @@
 		D3B7374F28E39B6F0008FD10 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7374E28E39B6F0008FD10 /* ContentDetailViewController.swift */; };
 		D3B7375128E39B930008FD10 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7375028E39B930008FD10 /* ContentDetailViewModel.swift */; };
 		D3B7375328E39BAA0008FD10 /* ContentDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7375228E39BAA0008FD10 /* ContentDetailModel.swift */; };
+		D3CE6FF228E5F21C003129DF /* unsplash_rsD_jv_A8Yo.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE6FF128E5F21C003129DF /* unsplash_rsD_jv_A8Yo.png */; };
+		D3CE6FF428E601A6003129DF /* Rectangle 50.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE6FF328E601A6003129DF /* Rectangle 50.png */; };
+		D3CE6FF628E61473003129DF /* Vector.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE6FF528E61473003129DF /* Vector.png */; };
+		D3CE6FF828E61552003129DF /* VectorHotels.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE6FF728E61552003129DF /* VectorHotels.png */; };
+		D3CE700428E61FF0003129DF /* homeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE700328E61FF0003129DF /* homeButton.png */; };
+		D3CE700628E621D1003129DF /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE700528E621D0003129DF /* searchButton.png */; };
+		D3CE700828E621F5003129DF /* bookmarksButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE700728E621F5003129DF /* bookmarksButton.png */; };
+		D3CE700A28E62220003129DF /* tabBarSelectedIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE700928E6221F003129DF /* tabBarSelectedIndicator.png */; };
+		D3CE700C28E62687003129DF /* homeButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE700B28E62686003129DF /* homeButtonSelected.png */; };
+		D3CE701228E63674003129DF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE701028E63674003129DF /* HomeCollectionViewCell.swift */; };
+		D3CE701328E63674003129DF /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CE701128E63674003129DF /* HomeCollectionViewCell.xib */; };
+		D3CE701B28E637F0003129DF /* collectionViewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE701A28E637F0003129DF /* collectionViewImage.png */; };
+		D3CE701D28E63864003129DF /* collectionViewBookmarkBg.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CE701C28E63864003129DF /* collectionViewBookmarkBg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +71,19 @@
 		D3B7374E28E39B6F0008FD10 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
 		D3B7375028E39B930008FD10 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
 		D3B7375228E39BAA0008FD10 /* ContentDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailModel.swift; sourceTree = "<group>"; };
+		D3CE6FF128E5F21C003129DF /* unsplash_rsD_jv_A8Yo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unsplash_rsD_jv_A8Yo.png; sourceTree = "<group>"; };
+		D3CE6FF328E601A6003129DF /* Rectangle 50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 50.png"; sourceTree = "<group>"; };
+		D3CE6FF528E61473003129DF /* Vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vector.png; sourceTree = "<group>"; };
+		D3CE6FF728E61552003129DF /* VectorHotels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VectorHotels.png; sourceTree = "<group>"; };
+		D3CE700328E61FF0003129DF /* homeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeButton.png; sourceTree = "<group>"; };
+		D3CE700528E621D0003129DF /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
+		D3CE700728E621F5003129DF /* bookmarksButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarksButton.png; sourceTree = "<group>"; };
+		D3CE700928E6221F003129DF /* tabBarSelectedIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarSelectedIndicator.png; sourceTree = "<group>"; };
+		D3CE700B28E62686003129DF /* homeButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeButtonSelected.png; sourceTree = "<group>"; };
+		D3CE701028E63674003129DF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D3CE701128E63674003129DF /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		D3CE701A28E637F0003129DF /* collectionViewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collectionViewImage.png; sourceTree = "<group>"; };
+		D3CE701C28E63864003129DF /* collectionViewBookmarkBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collectionViewBookmarkBg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +149,7 @@
 		D3B7371728E3947B0008FD10 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D3CE700D28E6360A003129DF /* Cell */,
 				D3B7371A28E3955F0008FD10 /* View */,
 				D3B7371928E395570008FD10 /* View Model */,
 				D3B7371828E3954E0008FD10 /* Model */,
@@ -293,6 +320,7 @@
 		D3B7372B28E397240008FD10 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D3CE6FF028E5F137003129DF /* Home */,
 				D3B7370F28E389DA0008FD10 /* Info.plist */,
 				D3B7370A28E389DA0008FD10 /* Assets.xcassets */,
 			);
@@ -340,6 +368,89 @@
 				D3B7374E28E39B6F0008FD10 /* ContentDetailViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D3CE6FF028E5F137003129DF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE701428E636CC003129DF /* Background */,
+				D3CE701528E636DF003129DF /* Button Background */,
+				D3CE701628E636FC003129DF /* Button Icons */,
+				D3CE701928E63765003129DF /* Collection View */,
+				D3CE6FFD28E61F2F003129DF /* Tab Bar */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D3CE6FFD28E61F2F003129DF /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE700B28E62686003129DF /* homeButtonSelected.png */,
+				D3CE700328E61FF0003129DF /* homeButton.png */,
+				D3CE700528E621D0003129DF /* searchButton.png */,
+				D3CE700728E621F5003129DF /* bookmarksButton.png */,
+				D3CE700928E6221F003129DF /* tabBarSelectedIndicator.png */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		D3CE700D28E6360A003129DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE701028E63674003129DF /* HomeCollectionViewCell.swift */,
+				D3CE701128E63674003129DF /* HomeCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D3CE701428E636CC003129DF /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE6FF128E5F21C003129DF /* unsplash_rsD_jv_A8Yo.png */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		D3CE701528E636DF003129DF /* Button Background */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE6FF328E601A6003129DF /* Rectangle 50.png */,
+			);
+			path = "Button Background";
+			sourceTree = "<group>";
+		};
+		D3CE701628E636FC003129DF /* Button Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE701828E63726003129DF /* Hotels */,
+				D3CE701728E63716003129DF /* Flights */,
+			);
+			path = "Button Icons";
+			sourceTree = "<group>";
+		};
+		D3CE701728E63716003129DF /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE6FF528E61473003129DF /* Vector.png */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		D3CE701828E63726003129DF /* Hotels */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE6FF728E61552003129DF /* VectorHotels.png */,
+			);
+			path = Hotels;
+			sourceTree = "<group>";
+		};
+		D3CE701928E63765003129DF /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE701A28E637F0003129DF /* collectionViewImage.png */,
+				D3CE701C28E63864003129DF /* collectionViewBookmarkBg.png */,
+			);
+			path = "Collection View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,9 +511,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CE700A28E62220003129DF /* tabBarSelectedIndicator.png in Resources */,
+				D3CE6FF228E5F21C003129DF /* unsplash_rsD_jv_A8Yo.png in Resources */,
+				D3CE6FF428E601A6003129DF /* Rectangle 50.png in Resources */,
+				D3CE6FF628E61473003129DF /* Vector.png in Resources */,
+				D3CE6FF828E61552003129DF /* VectorHotels.png in Resources */,
 				D3B7370E28E389DA0008FD10 /* LaunchScreen.storyboard in Resources */,
+				D3CE700828E621F5003129DF /* bookmarksButton.png in Resources */,
+				D3CE700C28E62687003129DF /* homeButtonSelected.png in Resources */,
+				D3CE700628E621D1003129DF /* searchButton.png in Resources */,
 				D3B7370B28E389DA0008FD10 /* Assets.xcassets in Resources */,
 				D3B7370928E389D40008FD10 /* Main.storyboard in Resources */,
+				D3CE701D28E63864003129DF /* collectionViewBookmarkBg.png in Resources */,
+				D3CE701328E63674003129DF /* HomeCollectionViewCell.xib in Resources */,
+				D3CE701B28E637F0003129DF /* collectionViewImage.png in Resources */,
+				D3CE700428E61FF0003129DF /* homeButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +550,7 @@
 				D3B7373A28E399490008FD10 /* BookmarksViewModel.swift in Sources */,
 				D3B7370428E389D40008FD10 /* SceneDelegate.swift in Sources */,
 				D3B7374928E39A100008FD10 /* HotelsViewController.swift in Sources */,
+				D3CE701228E63674003129DF /* HomeCollectionViewCell.swift in Sources */,
 				D3B7374628E399E60008FD10 /* HotelsViewModel.swift in Sources */,
 				D3B7375128E39B930008FD10 /* ContentDetailViewModel.swift in Sources */,
 				D3B7373C28E399580008FD10 /* BookmarksModel.swift in Sources */,
