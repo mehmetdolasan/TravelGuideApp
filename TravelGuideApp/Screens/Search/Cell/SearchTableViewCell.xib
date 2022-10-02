@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTableViewCell" rowHeight="153" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="TravelGuideApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="152"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="152"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WK1-tm-1Ck">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="152"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchItemBg-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-7r-gDv">
+                                <rect key="frame" x="0.0" y="0.0" width="358" height="152"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Marina Bay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahh-3o-v7r">
+                                <rect key="frame" x="114" y="52" width="130" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singapore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oiv-Ho-DfR">
+                                <rect key="frame" x="140" y="90" width="78" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hs7-7r-gDv" firstAttribute="top" secondItem="WK1-tm-1Ck" secondAttribute="top" id="25t-HR-h8i"/>
+                            <constraint firstItem="hs7-7r-gDv" firstAttribute="leading" secondItem="WK1-tm-1Ck" secondAttribute="leading" id="4GL-iI-RXX"/>
+                            <constraint firstItem="Oiv-Ho-DfR" firstAttribute="leading" secondItem="WK1-tm-1Ck" secondAttribute="leading" constant="140" id="4x0-aT-ze2"/>
+                            <constraint firstAttribute="bottom" secondItem="hs7-7r-gDv" secondAttribute="bottom" id="CQG-Ld-ttL"/>
+                            <constraint firstItem="Oiv-Ho-DfR" firstAttribute="top" secondItem="Ahh-3o-v7r" secondAttribute="bottom" constant="8" id="KzH-os-cGi"/>
+                            <constraint firstAttribute="bottom" secondItem="Oiv-Ho-DfR" secondAttribute="bottom" constant="40" id="LkM-Fw-1NN"/>
+                            <constraint firstItem="Ahh-3o-v7r" firstAttribute="top" secondItem="WK1-tm-1Ck" secondAttribute="top" constant="52" id="ZBv-QD-Clt"/>
+                            <constraint firstAttribute="trailing" secondItem="Ahh-3o-v7r" secondAttribute="trailing" constant="114" id="bDS-pC-dI0"/>
+                            <constraint firstAttribute="trailing" secondItem="hs7-7r-gDv" secondAttribute="trailing" id="kRb-bZ-G9K"/>
+                            <constraint firstItem="Ahh-3o-v7r" firstAttribute="leading" secondItem="WK1-tm-1Ck" secondAttribute="leading" constant="114" id="mr3-fb-a0m"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WK1-tm-1Ck" secondAttribute="bottom" id="4eQ-P2-HT1"/>
+                    <constraint firstItem="WK1-tm-1Ck" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AEv-Ao-IHX"/>
+                    <constraint firstAttribute="trailing" secondItem="WK1-tm-1Ck" secondAttribute="trailing" id="FWQ-HY-vpG"/>
+                    <constraint firstItem="WK1-tm-1Ck" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Lli-Pz-FHz"/>
+                    <constraint firstItem="WK1-tm-1Ck" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OAM-wi-BEj"/>
+                    <constraint firstItem="WK1-tm-1Ck" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QiD-7Z-O8a"/>
+                    <constraint firstAttribute="trailing" secondItem="WK1-tm-1Ck" secondAttribute="trailing" id="W41-ME-qbN"/>
+                    <constraint firstAttribute="bottom" secondItem="WK1-tm-1Ck" secondAttribute="bottom" id="wjs-G4-2w3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgImage" destination="hs7-7r-gDv" id="ygM-WJ-8gu"/>
+                <outlet property="containerView" destination="WK1-tm-1Ck" id="FSC-FI-Vwr"/>
+                <outlet property="descLabel" destination="Oiv-Ho-DfR" id="vX2-be-LcN"/>
+                <outlet property="nameLabel" destination="Ahh-3o-v7r" id="9ZL-RH-c3z"/>
+            </connections>
+            <point key="canvasLocation" x="159.42028985507247" y="129.57589285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="searchItemBg-1.png" width="712" height="301"/>
+    </resources>
+</document>

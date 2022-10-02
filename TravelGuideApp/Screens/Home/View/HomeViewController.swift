@@ -23,8 +23,9 @@ class HomeViewController: UIViewController {
     
     //label ' ı öne almak için gerekli kod
     //titleLabel.layer.zPosition = 1
-    //self.view.bringSubviewToFront(titleLabel)
-    //self.view.sendSubviewToBack(backgroundImage)
+    self.view.bringSubviewToFront(flightsButton)
+    self.view.sendSubviewToBack(backgroundImage)
+    flightsButton.layer.zPosition = 1
     
     flightsButton.layer.cornerRadius = 8
     hotelsButton.layer.cornerRadius = 8
@@ -35,12 +36,22 @@ class HomeViewController: UIViewController {
     
   }
   
+  
+  @IBAction func hotelsButtonTapped(_ sender: Any) {
+    let destVC = storyboard?.instantiateViewController(withIdentifier: "HotelsViewController")
+    navigationController?.pushViewController(destVC!, animated: true)
+    
+  }
+  @IBAction func flightsButtonTapped(_ sender: Any) {
+    let destVC = storyboard?.instantiateViewController(withIdentifier: "FlightsViewController")
+    navigationController?.pushViewController(destVC!, animated: true)
+  }
   //set the status bar color is white
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
   }
   override func viewDidAppear(_ animated: Bool) {
-    navigationController?.navigationBar.barStyle = .default
+    navigationController?.navigationBar.barStyle = .black
   }
 }
 
