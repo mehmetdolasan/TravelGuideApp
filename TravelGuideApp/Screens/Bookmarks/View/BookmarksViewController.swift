@@ -20,33 +20,20 @@ class BookmarksViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    //largeNavbarTitle()
-    //navigationController?.navigationBar.prefersLargeTitles = true
-    
     configureTableView()
     viewModel.viewDelegate = self
     viewModel.didViewLoad()
   }
   
-  /*
-  private func largeNavbarTitle(){
-    large navbar title
-    navigationController?.navigationBar.prefersLargeTitles = true
+  override func viewWillAppear(_ animated: Bool) {
+    AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
+    bookmarksTableView.reloadData()
   }
-  */
-  
+
   private func configureTableView(){
     let nib = UINib(nibName: "BookmarksTableViewCell", bundle: nil)
     bookmarksTableView.register(nib, forCellReuseIdentifier: "BookmarksTableViewCell")
     bookmarksTableView.dataSource = self
-  }
-  //add bookmarks with coredata
-  private func addBookmarks() {
-    let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
-    let data = Bookmarks(context: managedContext)
-    data.setValue("Nevsehir", forKey: #keyPath(Bookmarks.name))
-    data.setValue("Goreme", forKey: #keyPath(Bookmarks.desc))
-    AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
   }
   
 }

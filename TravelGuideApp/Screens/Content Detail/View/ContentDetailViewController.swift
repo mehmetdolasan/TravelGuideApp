@@ -50,7 +50,7 @@ class ContentDetailViewController: UIViewController {
     }else {
       if let hotel = hotel {
         self.titleLabel.text = hotel.hotelName
-        self.titleLabel.text = hotel.desc
+        self.descLabel.text = hotel.desc
       }
     }
   }
@@ -66,9 +66,7 @@ class ContentDetailViewController: UIViewController {
     backButton.layer.zPosition = 1
   }
   
-  private func addBookmarks() {
-    
-  }
+  
   
   @IBAction func backButtonTapped(_ sender: Any) {
     navigationController?.popViewController(animated: true)
@@ -85,6 +83,7 @@ class ContentDetailViewController: UIViewController {
       data.setValue(self.hotel?.hotelName, forKey: #keyPath(Bookmarks.name))
       data.setValue(self.hotel?.desc, forKey: #keyPath(Bookmarks.desc))
           AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
+      
       
     }))
     alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.destructive, handler: nil))

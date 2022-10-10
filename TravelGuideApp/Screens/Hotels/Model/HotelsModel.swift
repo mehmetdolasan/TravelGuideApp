@@ -23,8 +23,8 @@ class HotelsModel {
   //API Request
   let baseUrl: String = "https://api.test.hotelbeds.com"
   let contentURI: String = "/hotel-content-api/1.0"
-  let apiKey: String = "516e5237fbad5090ecb29c11f23146f1"
-  let secret: String = "883dec855e"
+  let apiKey: String = "3ca3f26780a6932d70da286a478538ac"
+  let secret: String = "154811a027"
   
   
   let baseHeaders: [String:String] = [:]
