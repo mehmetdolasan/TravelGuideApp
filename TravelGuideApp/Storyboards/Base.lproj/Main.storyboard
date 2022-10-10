@@ -199,7 +199,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9vQ-FX-hud">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9vQ-FX-hud">
                                 <rect key="frame" x="16" y="160" width="382" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -225,17 +225,97 @@
         <!--Content Detail View Controller-->
         <scene sceneID="fGa-d0-ccg">
             <objects>
-                <viewController id="bXa-zB-BDQ" customClass="ContentDetailViewController" customModule="TravelGuideApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentDetailViewController" id="bXa-zB-BDQ" customClass="ContentDetailViewController" customModule="TravelGuideApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DDf-e1-lZd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLR-9K-ouQ">
+                                <rect key="frame" x="20" y="463" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTk-py-boe">
+                                <rect key="frame" x="20" y="493" width="374" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="PTl-50-T8A"/>
+                                    <constraint firstAttribute="width" constant="374" id="fro-vq-TGd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJX-Ec-cZY">
+                                <rect key="frame" x="20" y="130" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Q78-9y-Yls"/>
+                                    <constraint firstAttribute="width" constant="45" id="ZPo-bp-MRQ"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrow.left" catalog="system">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="bXa-zB-BDQ" eventType="touchUpInside" id="H4c-6B-N5k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jm3-TK-6en">
+                                <rect key="frame" x="40" y="762" width="334" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HVV-b5-Rzf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add Bookmark">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="1" green="0.28270393239841773" blue="0.40506032864643959" alpha="0.88680818065112788" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonAddBookmarkTapped:" destination="bXa-zB-BDQ" eventType="touchUpInside" id="ERg-nP-i9O"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contentDetailBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="LLm-fX-ZT2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="403"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EzJ-MH-fxx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jm3-TK-6en" firstAttribute="leading" secondItem="EzJ-MH-fxx" secondAttribute="leading" constant="40" id="3pm-UO-Cyl"/>
+                            <constraint firstItem="EzJ-MH-fxx" firstAttribute="trailing" secondItem="jm3-TK-6en" secondAttribute="trailing" constant="40" id="B8M-Z1-8bc"/>
+                            <constraint firstItem="ZJX-Ec-cZY" firstAttribute="top" secondItem="DDf-e1-lZd" secondAttribute="top" constant="130" id="CDs-9h-UOR"/>
+                            <constraint firstItem="aTk-py-boe" firstAttribute="leading" secondItem="EzJ-MH-fxx" secondAttribute="leading" constant="20" id="KWn-QV-Nsw"/>
+                            <constraint firstItem="ZJX-Ec-cZY" firstAttribute="leading" secondItem="EzJ-MH-fxx" secondAttribute="leading" constant="20" id="Qk9-lq-KkY"/>
+                            <constraint firstItem="LLm-fX-ZT2" firstAttribute="trailing" secondItem="EzJ-MH-fxx" secondAttribute="trailing" id="SK2-2C-JsU"/>
+                            <constraint firstItem="LLm-fX-ZT2" firstAttribute="leading" secondItem="EzJ-MH-fxx" secondAttribute="leading" id="SRy-ra-ivE"/>
+                            <constraint firstItem="BLR-9K-ouQ" firstAttribute="top" secondItem="LLm-fX-ZT2" secondAttribute="bottom" constant="60" id="T00-ik-Rbd"/>
+                            <constraint firstItem="EzJ-MH-fxx" firstAttribute="bottom" secondItem="jm3-TK-6en" secondAttribute="bottom" constant="40" id="Wa1-3t-zGu"/>
+                            <constraint firstItem="aTk-py-boe" firstAttribute="top" secondItem="LLm-fX-ZT2" secondAttribute="bottom" constant="90" id="XZD-2V-zPw"/>
+                            <constraint firstItem="EzJ-MH-fxx" firstAttribute="trailing" secondItem="BLR-9K-ouQ" secondAttribute="trailing" constant="20" id="XsO-2e-dHQ"/>
+                            <constraint firstItem="LLm-fX-ZT2" firstAttribute="top" secondItem="DDf-e1-lZd" secondAttribute="top" id="bw1-8Y-fbw"/>
+                            <constraint firstItem="BLR-9K-ouQ" firstAttribute="leading" secondItem="EzJ-MH-fxx" secondAttribute="leading" constant="20" id="oPE-yD-d9J"/>
+                            <constraint firstItem="EzJ-MH-fxx" firstAttribute="trailing" secondItem="aTk-py-boe" secondAttribute="trailing" constant="20" id="qAE-lZ-YHR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addBookmarkButton" destination="jm3-TK-6en" id="wgY-4q-mWo"/>
+                        <outlet property="backButton" destination="ZJX-Ec-cZY" id="jMy-0o-Vg1"/>
+                        <outlet property="backgroundImg" destination="LLm-fX-ZT2" id="2SW-WL-a7M"/>
+                        <outlet property="descLabel" destination="aTk-py-boe" id="zFS-xd-Ref"/>
+                        <outlet property="titleLabel" destination="BLR-9K-ouQ" id="vBy-uB-ksH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdK-Dq-XlU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686" y="110"/>
+            <point key="canvasLocation" x="3685.507246376812" y="109.82142857142857"/>
         </scene>
         <!--Search-->
         <scene sceneID="Bsr-2N-YR1">
@@ -261,7 +341,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-VX-akj">
                                                 <rect key="frame" x="30" y="0.0" width="70" height="20"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" red="0.92925310130000005" green="0.26133784650000003" blue="0.36665230989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.92900000000000005" green="0.26133784650000003" blue="0.36665230989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -281,7 +361,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="256" verticalHuggingPriority="256" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bB5-rX-DSy">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="flightsUnselected.png" translatesAutoresizingMaskIntoConstraints="NO" id="hul-JV-UGQ">
+                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="flightsUnselected.png" translatesAutoresizingMaskIntoConstraints="NO" id="hul-JV-UGQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Xww-IM-fQa"/>
@@ -482,7 +562,9 @@
     <resources>
         <image name="Vector.png" width="36" height="29"/>
         <image name="VectorHotels.png" width="35" height="31"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="bookmarksButton.png" width="28" height="27"/>
+        <image name="contentDetailBg.png" width="389" height="403"/>
         <image name="flightsUnselected.png" width="21" height="17"/>
         <image name="homeButton.png" width="24" height="25"/>
         <image name="homeButtonSelected.png" width="24" height="25"/>

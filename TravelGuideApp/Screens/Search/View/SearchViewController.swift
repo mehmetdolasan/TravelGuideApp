@@ -9,6 +9,10 @@ import UIKit
 
 class SearchViewController: UIViewController {
   
+  //Design variables
+  var viewModel = SearchViewModel()
+  private var model = SearchModel()
+  
   //MARK: hotel elements
   @IBOutlet weak var hotelStackView: UIStackView!
   @IBOutlet weak var hotelIcon: UIImageView!
@@ -26,9 +30,32 @@ class SearchViewController: UIViewController {
   //MARK: taps's status
   var hotelTapStatus = false
   var flightsTapStatus = false
+  
+  var tableFlightData: [FlightsCellViewModel] = []
+  var tableHotelData: [HotelsCellViewModel] = []
+  
   //MARK: lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    model.fetchFlightData()
+    model.fecthHotelData()
+    
+    
+//    let f1 = FlightsCellViewModel(origin: "İzmir", destination: "İst", price: 80)
+//    let f2 = FlightsCellViewModel(origin: "Antalya", destination: "İst", price: 60)
+//    let f3 = FlightsCellViewModel(origin: "Adana", destination: "Bursa", price: 50)
+//    let f4 = FlightsCellViewModel(origin: "Urfa", destination: "İzmir", price: 70)
+//    tableFlightData.append(f1)
+//    tableFlightData.append(f2)
+//    tableFlightData.append(f3)
+//    tableFlightData.append(f4)
+//    let h1 = HotelsCellViewModel(hotelName: "Ordu Balıktaşı", desc: "Deniz Manzaralı 3 Yıldız")
+//    let h2 = HotelsCellViewModel(hotelName: "Rixos Antalya", desc: "4 Yıldız Premium")
+//    let h3 = HotelsCellViewModel(hotelName: "Six Senses Sarıyer", desc: "5 Yıldız Lüx")
+//    tableHotelData.append(h1)
+//    tableHotelData.append(h2)
+//    tableHotelData.append(h3)
     
     //MARK: init navbar large title
     navigationController?.navigationBar.prefersLargeTitles = true
@@ -57,8 +84,17 @@ class SearchViewController: UIViewController {
     hotelTapStatus = true
     flightsTapStatus = false
     
+    hotelIcon.image = UIImage(named: "hotelsSelected")
+    hotelLabel.textColor = UIColor(red: 0.929, green: 0.261, blue: 0.367, alpha: 1.0)
+    flightsLabel.textColor = UIColor(red: 0.760, green: 0.773, blue: 0.841, alpha: 1.0)
+    flightsIcon.image = UIImage(named: "flightsUnselected")
+    
     flightsLine.isHidden = true
     hotelLine.isHidden = false
+    
+    //
+    tableView.reloadData()
+    
     
   }
   //MARK: flights stackView tapped
@@ -68,42 +104,79 @@ class SearchViewController: UIViewController {
     flightsTapStatus = true
     hotelTapStatus = false
     
+    flightsIcon.image = UIImage(named: "flightsSelected")
+    flightsLabel.textColor = UIColor(red: 0.929, green: 0.261, blue: 0.367, alpha: 1.0)
+    hotelLabel.textColor = UIColor(red: 0.760, green: 0.773, blue: 0.841, alpha: 1.0)
+    hotelIcon.image = UIImage(named: "hotelsUnselected")
+    
     hotelLine.isHidden = true
     flightsLine.isHidden = false
     
+    //
+    tableView.reloadData()
+    tableView.dataSource = self
+    //
+    let nib2 = UINib(nibName: "SearchFlightTableViewCell", bundle: nil)
+    tableView.register(nib2, forCellReuseIdentifier: "SearchFlightTableViewCell")
     
   }
   
   //MARK: setup ui
   func setupUI(){
     tableView.dataSource = self
-    tableView.delegate = self
     
     let nib = UINib(nibName: "SearchTableViewCell", bundle: nil)
     tableView.register(nib, forCellReuseIdentifier: "SearchTableViewCell")
+    
   }
   
 }
-//MARK: tableView delegate
-extension SearchViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+
+extension SearchViewController: SearchViewModelViewProtocol {
+  func didFlightCellItemFetch(_ flights: [FlightsCellViewModel]) {
+    self.tableFlightData = flights
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+    }
   }
+  
+  func didHotelCellItemFetch(_ hotels: [HotelsCellViewModel]) {
+    self.tableHotelData = hotels
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+    }
+  }
+  
 }
+
+
 //MARK: tableView data  source
 extension SearchViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    if flightsTapStatus {
+      return tableFlightData.count
+    }else {
+      return tableHotelData.count
+    }
+    
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
-    cell.bgImage.image = UIImage(named: "searchItemBg-1")
-    cell.nameLabel.text = "Marina Bay"
-    cell.descLabel.text = "Singapore"
-    cell.layer.cornerRadius = 10
-    return cell
-    
+    if flightsTapStatus {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "SearchFlightTableViewCell") as! SearchFlightTableViewCell
+      //cell.bgImage.image = UIImage(named: "searchItemBg-1")
+      cell.nameLabel.text = "\(tableFlightData[indexPath.row].origin ?? "") to \(tableFlightData[indexPath.row].destination ?? "")"
+      cell.descLabel.text = "\(tableFlightData[indexPath.row].price ?? 0) $"
+      cell.translatesAutoresizingMaskIntoConstraints = false
+      cell.selectionStyle = .none
+      return cell
+    }else {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
+      cell.bgImage.image = UIImage(named: "searchItemBg-1")
+      cell.nameLabel.text = tableHotelData[indexPath.row].hotelName
+      cell.descLabel.text = tableHotelData[indexPath.row].desc
+      cell.selectionStyle = .none
+      return cell
+    }
   }
 }

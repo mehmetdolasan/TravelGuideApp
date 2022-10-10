@@ -16,7 +16,7 @@ class SearchTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
+    
     
     
   }
@@ -24,15 +24,9 @@ class SearchTableViewCell: UITableViewCell {
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     
-    // Configure the view for the selected state
-    
+    bgImage.clipsToBounds = true
+    bgImage.layer.cornerRadius = 15
     
   }
-  
-//  override func layoutSubviews() {
-//    super.layoutSubviews()
-//
-//    contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 15, right: 0))
-//  }
-  
+
 }
