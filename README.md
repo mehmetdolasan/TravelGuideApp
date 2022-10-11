@@ -1,4 +1,4 @@
-# FMSS-Homework-3
+# FMSS IOS Bootcamp Bitirme Projesi
 
 ## Özet
 
