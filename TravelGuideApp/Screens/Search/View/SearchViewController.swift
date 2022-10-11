@@ -42,21 +42,6 @@ class SearchViewController: UIViewController {
     model.fecthHotelData()
     
     
-//    let f1 = FlightsCellViewModel(origin: "İzmir", destination: "İst", price: 80)
-//    let f2 = FlightsCellViewModel(origin: "Antalya", destination: "İst", price: 60)
-//    let f3 = FlightsCellViewModel(origin: "Adana", destination: "Bursa", price: 50)
-//    let f4 = FlightsCellViewModel(origin: "Urfa", destination: "İzmir", price: 70)
-//    tableFlightData.append(f1)
-//    tableFlightData.append(f2)
-//    tableFlightData.append(f3)
-//    tableFlightData.append(f4)
-//    let h1 = HotelsCellViewModel(hotelName: "Ordu Balıktaşı", desc: "Deniz Manzaralı 3 Yıldız")
-//    let h2 = HotelsCellViewModel(hotelName: "Rixos Antalya", desc: "4 Yıldız Premium")
-//    let h3 = HotelsCellViewModel(hotelName: "Six Senses Sarıyer", desc: "5 Yıldız Lüx")
-//    tableHotelData.append(h1)
-//    tableHotelData.append(h2)
-//    tableHotelData.append(h3)
-    
     //MARK: init navbar large title
     navigationController?.navigationBar.prefersLargeTitles = true
     //MARK: init taps status and appereance
@@ -71,6 +56,9 @@ class SearchViewController: UIViewController {
     //MARK: flights stackView Tap Recognizer
     let flightsStackViewTap = UITapGestureRecognizer(target: self, action: #selector(flightsStackViewTapped))
     flightsStackView.addGestureRecognizer(flightsStackViewTap)
+    
+    viewModel.viewDelegate = self
+    viewModel.didViewLoad()
     
     //MARK: init setup ui
     setupUI()
@@ -94,6 +82,8 @@ class SearchViewController: UIViewController {
     
     //
     tableView.reloadData()
+    tableView.dataSource = self
+    viewModel.didViewLoad()
     
     
   }
@@ -115,9 +105,8 @@ class SearchViewController: UIViewController {
     //
     tableView.reloadData()
     tableView.dataSource = self
-    //
-    let nib2 = UINib(nibName: "SearchFlightTableViewCell", bundle: nil)
-    tableView.register(nib2, forCellReuseIdentifier: "SearchFlightTableViewCell")
+    viewModel.didViewLoad()
+    
     
   }
   
@@ -153,28 +142,39 @@ extension SearchViewController: SearchViewModelViewProtocol {
 //MARK: tableView data  source
 extension SearchViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if flightsTapStatus {
-      return tableFlightData.count
-    }else {
+    if hotelTapStatus {
       return tableHotelData.count
+    }else {
+      return tableFlightData.count
     }
     
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if flightsTapStatus {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "SearchFlightTableViewCell") as! SearchFlightTableViewCell
-      //cell.bgImage.image = UIImage(named: "searchItemBg-1")
-      cell.nameLabel.text = "\(tableFlightData[indexPath.row].origin ?? "") to \(tableFlightData[indexPath.row].destination ?? "")"
-      cell.descLabel.text = "\(tableFlightData[indexPath.row].price ?? 0) $"
-      cell.translatesAutoresizingMaskIntoConstraints = false
-      cell.selectionStyle = .none
-      return cell
-    }else {
+    if hotelTapStatus {
       let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
       cell.bgImage.image = UIImage(named: "searchItemBg-1")
-      cell.nameLabel.text = tableHotelData[indexPath.row].hotelName
-      cell.descLabel.text = tableHotelData[indexPath.row].desc
+      if let hotelName = tableHotelData[indexPath.row].hotelName, let hotelDesc = tableHotelData[indexPath.row].desc {
+        cell.nameLabel.text = hotelName
+        cell.descLabel.text = hotelDesc
+        
+      }
+      cell.selectionStyle = .none
+      return cell
+      
+    }else {
+      
+      let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
+      cell.bgImage.image = UIImage(named: "searchItemBg-1")
+      if let origin = tableFlightData[indexPath.row].origin,
+         let destination = tableFlightData[indexPath.row].destination,
+         let price = tableFlightData[indexPath.row].price {
+        
+        cell.nameLabel.text = origin + " to " + destination
+        cell.descLabel.text = "\(price)"
+        
+      }
+      
       cell.selectionStyle = .none
       return cell
     }

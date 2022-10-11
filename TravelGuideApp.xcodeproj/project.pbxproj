@@ -35,8 +35,6 @@
 		D38A96D528F2E39F0043DC0F /* contentDetailBg.png in Resources */ = {isa = PBXBuildFile; fileRef = D38A96D428F2E39E0043DC0F /* contentDetailBg.png */; };
 		D38A96D728F33C2B0043DC0F /* arrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = D38A96D628F33C2B0043DC0F /* arrowLeft.png */; };
 		D38A96D928F3675C0043DC0F /* searchItemBg-2.png in Resources */ = {isa = PBXBuildFile; fileRef = D38A96D828F3675C0043DC0F /* searchItemBg-2.png */; };
-		D38A96E028F4B03B0043DC0F /* SearchFlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38A96DE28F4B03B0043DC0F /* SearchFlightTableViewCell.swift */; };
-		D38A96E128F4B03B0043DC0F /* SearchFlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38A96DF28F4B03B0043DC0F /* SearchFlightTableViewCell.xib */; };
 		D3B7370228E389D40008FD10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7370128E389D40008FD10 /* AppDelegate.swift */; };
 		D3B7370428E389D40008FD10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7370328E389D40008FD10 /* SceneDelegate.swift */; };
 		D3B7370628E389D40008FD10 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7370528E389D40008FD10 /* HomeViewController.swift */; };
@@ -104,8 +102,6 @@
 		D38A96D428F2E39E0043DC0F /* contentDetailBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contentDetailBg.png; sourceTree = "<group>"; };
 		D38A96D628F33C2B0043DC0F /* arrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowLeft.png; sourceTree = "<group>"; };
 		D38A96D828F3675C0043DC0F /* searchItemBg-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchItemBg-2.png"; sourceTree = "<group>"; };
-		D38A96DE28F4B03B0043DC0F /* SearchFlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlightTableViewCell.swift; sourceTree = "<group>"; };
-		D38A96DF28F4B03B0043DC0F /* SearchFlightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFlightTableViewCell.xib; sourceTree = "<group>"; };
 		D3B736FE28E389D40008FD10 /* TravelGuideApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelGuideApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B7370128E389D40008FD10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3B7370328E389D40008FD10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,8 +198,6 @@
 			children = (
 				D33EF7F728E9DD3200956747 /* SearchTableViewCell.swift */,
 				D33EF7F828E9DD3200956747 /* SearchTableViewCell.xib */,
-				D38A96DE28F4B03B0043DC0F /* SearchFlightTableViewCell.swift */,
-				D38A96DF28F4B03B0043DC0F /* SearchFlightTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -685,7 +679,6 @@
 				D3CE700A28E62220003129DF /* tabBarSelectedIndicator.png in Resources */,
 				D38A96D928F3675C0043DC0F /* searchItemBg-2.png in Resources */,
 				D3CE6FF228E5F21C003129DF /* unsplash_rsD_jv_A8Yo.png in Resources */,
-				D38A96E128F4B03B0043DC0F /* SearchFlightTableViewCell.xib in Resources */,
 				D3CE6FF428E601A6003129DF /* Rectangle 50.png in Resources */,
 				D33EF7ED28E9BFE500956747 /* searchSelectedLine.png in Resources */,
 				D33EF80028E9DFBB00956747 /* searchItemBg-1.png in Resources */,
@@ -792,7 +785,6 @@
 				D33EF82428F200D500956747 /* FlightsCellViewModel.swift in Sources */,
 				D33EF82228F1FE8900956747 /* Flights.swift in Sources */,
 				D33EF80928EA1F6B00956747 /* HotelsTableViewCell.swift in Sources */,
-				D38A96E028F4B03B0043DC0F /* SearchFlightTableViewCell.swift in Sources */,
 				D3B7373C28E399580008FD10 /* BookmarksModel.swift in Sources */,
 				D3B7373028E3984A0008FD10 /* HomeModel.swift in Sources */,
 				D3B7372E28E398380008FD10 /* HomeViewModel.swift in Sources */,
